@@ -75,10 +75,10 @@ public class HttpClientUtil {
 
     /**
      * description 表单方式的post
-     * @param url
-     * @param headers
-     * @param params
-     * @return
+     * @param url 请求地址
+     * @param headers 请求头
+     * @param params 请求参数
+     * @return JSONObject
      * @throws Exception
      */
     public static JSONObject doFormPost(String url,Map<String, String> headers, Map<String, String> params) throws Exception{
@@ -102,10 +102,10 @@ public class HttpClientUtil {
 
     /**
      * description 表单方式的post
-     * @param url
-     * @param headers
-     * @param params
-     * @return
+     * @param url 请求头
+     * @param headers 请求头
+     * @param params 请求参数
+     * @return JSONObject
      * @throws Exception
      */
     public static JSONObject doJsonPost(String url,Map<String, String> headers, Map<String, String> params) throws Exception{

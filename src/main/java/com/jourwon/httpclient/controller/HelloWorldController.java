@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/hello")
 public class HelloWorldController {
 
+    /**
+     * replace @RequestMapping(method = RequestMethod.GET)
+     * */
 	@GetMapping("/getWithParam")
 	public String getWithParam(@RequestParam String message) {
 		JSONObject jsonObject = new JSONObject();
@@ -21,6 +24,9 @@ public class HelloWorldController {
 		return jsonObject.toJSONString();
 	}
 
+    /**
+     * replace @RequestMapping(method = RequestMethod.POST)
+     * */
 	@PostMapping("/postFormWithParam")
 	public String postFormWithParam(@RequestParam String code, @RequestParam String message) {
         JSONObject jsonObject = new JSONObject();
@@ -30,6 +36,9 @@ public class HelloWorldController {
 		return jsonObject.toJSONString();
 	}
 
+    /**
+     * replace @RequestMapping(method = RequestMethod.POST)
+     * */
 	@PostMapping("/login")
     public String postJsonWithParam(@RequestBody JSONObject request){
 	    String userName = request.getString("userName");
